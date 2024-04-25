@@ -1,0 +1,9 @@
+'Jonnitto.Maps:Content.Map':
+  superTypes:
+    'Litespeed.Theme:Mixin.Breakout': true
+  ui:
+    position: 900
+  properties:
+    breakout:
+      ui:
+        reloadPageIfChanged: true

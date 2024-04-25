@@ -1,0 +1,16 @@
+prototype(Jonnitto.Maps:Content.Map) {
+    additionalClass = Neos.Fusion:Component {
+        breakout = ${q(node).property('breakout')}
+        renderer = Litespeed.Presentation:Spacing {
+            onlyClass = true
+            width = ${props.breakout}
+            waveSpacing = true
+            tailwind = Neos.Fusion:Match {
+                @subject = ${props.breakout}
+                @default = 'rounded-box overflow-clip shadow'
+                wide = 'wide:rounded-box wide:overflow-clip shadow'
+                full = 'shadow'
+            }
+        }
+    }
+}

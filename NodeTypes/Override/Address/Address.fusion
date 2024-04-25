@@ -1,0 +1,25 @@
+prototype(Litespeed.Presentation:Module.Address) {
+    map = ${{addressName: this.addressName, street: this.street, postCode: this.postCode, city: this.city, country: this.country}}
+    map.@process.component = Neos.Fusion:Component {
+        showMap = ${q(node).property('additionalMap') && this.location && this.location.lat && this.location.lng}
+        location = ${q(site).property('location')}
+        zoom = ${q(node).property('zoom')}
+
+        renderer = afx`
+            <Jonnitto.Maps:Presentation.Map
+                @if={props.showMap}
+                coordinates={[props.location]}
+                zoom={props.zoom}
+            >
+                <Jonnitto.Maps:Presentation.Address
+                    name={value.addressName}
+                    street={value.street}
+                    postCode={value.postCode}
+                    city={value.city}
+                    country={value.country}
+                    location={props.location}
+                />
+            </Jonnitto.Maps:Presentation.Map>
+        `
+    }
+}

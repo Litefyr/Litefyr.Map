@@ -1,0 +1,21 @@
+{
+    "name": "litespeed/map",
+    "description": "A map node type for Litespeed",
+    "type": "neos-litespeed",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "litespeed/theme": "self.version",
+        "jonnitto/maps": "^0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Litespeed\\Map\\": "Classes"
+        }
+    },
+    "keywords": [
+        "flow",
+        "neos",
+        "litespeed",
+        "nodetype"
+    ]
+}

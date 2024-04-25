@@ -1,0 +1,23 @@
+'Litespeed.Theme:Content.Address':
+  superTypes:
+    'Carbon.GeoMap:Mixin.Zoom': true
+  ui:
+    inspector:
+      groups:
+        map:
+          label: 'Litespeed.Map:NodeTypes.Content.Address:groups.map'
+          icon: map-marked
+          position: 22
+  properties:
+    zoom:
+      ui:
+        inspector:
+          hidden: 'ClientEval: node.properties.additionalMap ? false : true'
+    additionalMap:
+      type: boolean
+      ui:
+        label: 'Litespeed.Map:NodeTypes.Content.Address:properties.additionalMap'
+        reloadPageIfChanged: true
+        inspector:
+          group: additionalContent
+          position: 10
