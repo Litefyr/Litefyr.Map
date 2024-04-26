@@ -1,4 +1,4 @@
-'Litespeed.Theme:Content.Address':
+'Litespeed.Integration:Content.Address':
   superTypes:
     'Carbon.GeoMap:Mixin.Zoom': true
   ui:
