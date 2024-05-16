@@ -2,9 +2,9 @@ Neos:
   Neos:
     fusion:
       autoInclude:
-        Litespeed.Map: true
+        Litefyr.Map: true
     userInterface:
       translation:
         autoInclude:
-          Litespeed.Map:
+          Litefyr.Map:
             - 'NodeTypes/*'

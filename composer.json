@@ -1,21 +1,21 @@
 {
-    "name": "lspeed/map",
-    "description": "A map node type for Litespeed",
-    "type": "neos-litespeed",
+    "name": "litefyr/map",
+    "description": "A map node type for Litefyr",
+    "type": "neos-litefyr",
     "license": "GPL-3.0-or-later",
     "require": {
-        "lspeed/integration": "self.version",
+        "litefyr/integration": "self.version",
         "jonnitto/maps": "^0.2"
     },
     "autoload": {
         "psr-4": {
-            "Litespeed\\Map\\": "Classes"
+            "Litefyr\\Map\\": "Classes"
         }
     },
     "keywords": [
         "flow",
         "neos",
-        "litespeed",
+        "litefyr",
         "nodetype"
     ]
 }

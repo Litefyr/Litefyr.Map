@@ -1,6 +1,6 @@
 'Jonnitto.Maps:Content.Map':
   superTypes:
-    'Litespeed.Integration:Mixin.Breakout': true
+    'Litefyr.Integration:Mixin.Breakout': true
   ui:
     position: 900
   properties:

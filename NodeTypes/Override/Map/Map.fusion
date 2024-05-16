@@ -1,7 +1,7 @@
 prototype(Jonnitto.Maps:Content.Map) {
     additionalClass = Neos.Fusion:Component {
         breakout = ${q(node).property('breakout')}
-        renderer = Litespeed.Presentation:Spacing {
+        renderer = Litefyr.Presentation:Spacing {
             onlyClass = true
             width = ${props.breakout}
             waveSpacing = true

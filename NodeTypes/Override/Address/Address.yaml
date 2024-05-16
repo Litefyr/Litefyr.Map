@@ -1,11 +1,11 @@
-'Litespeed.Integration:Content.Address':
+'Litefyr.Integration:Content.Address':
   superTypes:
     'Carbon.GeoMap:Mixin.Zoom': true
   ui:
     inspector:
       groups:
         map:
-          label: 'Litespeed.Map:NodeTypes.Content.Address:groups.map'
+          label: 'Litefyr.Map:NodeTypes.Content.Address:groups.map'
           icon: map-marked
           position: 22
   properties:
@@ -16,7 +16,7 @@
     additionalMap:
       type: boolean
       ui:
-        label: 'Litespeed.Map:NodeTypes.Content.Address:properties.additionalMap'
+        label: 'Litefyr.Map:NodeTypes.Content.Address:properties.additionalMap'
         reloadPageIfChanged: true
         inspector:
           group: additionalContent

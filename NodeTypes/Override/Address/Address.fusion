@@ -1,4 +1,4 @@
-prototype(Litespeed.Presentation:Module.Address) {
+prototype(Litefyr.Presentation:Module.Address) {
     map = ${{addressName: this.addressName, street: this.street, postCode: this.postCode, city: this.city, country: this.country}}
     map.@process.component = Neos.Fusion:Component {
         showMap = ${q(node).property('additionalMap') && this.location && this.location.lat && this.location.lng}
