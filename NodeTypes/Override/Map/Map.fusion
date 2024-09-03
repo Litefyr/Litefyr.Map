@@ -5,6 +5,7 @@ prototype(Jonnitto.Maps:Content.Map) {
             onlyClass = true
             width = ${props.breakout}
             waveSpacing = true
+            class = ${Presentation.cssClass('map')}
             tailwind = Neos.Fusion:Match {
                 @subject = ${props.breakout}
                 @default = 'rounded-box overflow-clip shadow'
