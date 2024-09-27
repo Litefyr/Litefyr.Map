@@ -1,9 +1,24 @@
 'Jonnitto.Maps:Content.Map':
   superTypes:
     'Litefyr.Integration:Mixin.Breakout': true
+    'Litefyr.Animations:Mixin.Element': true
+    'Litefyr.Animations:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent.Position': true
+    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litefyr.Integration:Mixin.TextWithContent.Label': true
   ui:
     position: 900
   properties:
+    textLeft:
+      ui:
+        reloadPageIfChanged: true
+    leftColSize:
+      ui:
+        reloadPageIfChanged: true
+    enableText:
+      ui:
+        reloadPageIfChanged: true
     breakout:
       ui:
         reloadPageIfChanged: true

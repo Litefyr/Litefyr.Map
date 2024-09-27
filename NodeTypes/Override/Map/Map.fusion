@@ -1,5 +1,33 @@
 prototype(Jonnitto.Maps:Content.Map) {
+    breakout = ${q(node).property('breakout')}
+    enableText = ${q(node).property('enableText')}
+    leftColSize = ${q(node).property('leftColSize')}
+    textLeft = ${q(node).property('textLeft')}
+    links = Litefyr.Integration:Component.Links
+
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    animationMedia = Litefyr.Animations:Helper.Media
+    animationText = Litefyr.Animations:Helper.Text
+
+    attributes = Neos.Fusion:DataStructure {
+        @if.set = ${!q(node).property('enableText')}
+        data-animation-media = Litefyr.Animations:Helper.Media
+    }
     additionalClass = Neos.Fusion:Component {
+        @if.set = ${!q(node).property('enableText')}
         breakout = ${q(node).property('breakout')}
         renderer = Litefyr.Presentation:Spacing {
             onlyClass = true
@@ -12,6 +40,20 @@ prototype(Jonnitto.Maps:Content.Map) {
                 wide = 'wide:rounded-box wide:overflow-clip shadow'
                 full = 'shadow'
             }
+        }
+    }
+
+    renderer.@process.textWithContent = Litefyr.Presentation:Module.TextWithContent {
+        @if.set = ${props.enableText}
+        @apply.props = ${props}
+        breakpoint = 'lg'
+        singleContent = ${value}
+        wrapperClass = ${Presentation.cssClass("map")}
+        contentClass = Neos.Fusion:Match {
+            @subject = ${props.breakout || ''}
+            @default = 'rounded-box overflow-clip shadow'
+            wide = 'wide:rounded-box wide:overflow-clip shadow'
+            full = 'shadow'
         }
     }
 }
