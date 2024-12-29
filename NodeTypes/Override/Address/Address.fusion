@@ -1,15 +1,24 @@
 prototype(Litefyr.Presentation:Module.Address) {
-    map = ${{addressName: this.addressName, street: this.street, postCode: this.postCode, city: this.city, country: this.country}}
+    map = ${{addressName: this.addressName, street: this.street, postCode: this.postCode, city: this.city, country: this.country, theme: this.theme}}
     map.@process.component = Neos.Fusion:Component {
         showMap = ${q(node).property('additionalMap') && this.location && this.location.lat && this.location.lng}
         location = ${q(site).property('location')}
         zoom = ${q(node).property('zoom')}
+        attributes = Neos.Fusion:DataStructure {
+            data-theme = 'default'
+        }
+
+        additionalClass = ${value.theme ? 'clippath-map' : null}
+        showReloadButton = ${node.context.inBackend}
 
         renderer = afx`
             <Jonnitto.Maps:Presentation.Map
                 @if={props.showMap}
                 coordinates={[props.location]}
                 zoom={props.zoom}
+                attributes={props.attributes}
+                additionalClass={props.additionalClass}
+                showReloadButton={props.showReloadButton}
             >
                 <Jonnitto.Maps:Presentation.Address
                     name={value.addressName}

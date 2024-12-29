@@ -4,21 +4,11 @@
     'Litefyr.Animations:Mixin.Element': true
     'Litefyr.Animations:Mixin.TextWithContent': true
     'Litefyr.Integration:Mixin.TextWithContent': true
-    'Litefyr.Integration:Mixin.TextWithContent.Position': true
-    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litefyr.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Style:Mixin.EnableClipPath': true
   ui:
     position: 900
   properties:
-    textLeft:
+    enableClipPath:
       ui:
-        reloadPageIfChanged: true
-    leftColSize:
-      ui:
-        reloadPageIfChanged: true
-    enableText:
-      ui:
-        reloadPageIfChanged: true
-    breakout:
-      ui:
-        reloadPageIfChanged: true
+        inspector:
+          position: start 1

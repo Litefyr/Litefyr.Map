@@ -1,8 +1,14 @@
 prototype(Jonnitto.Maps:Content.Map) {
     breakout = ${q(node).property('breakout')}
     enableText = ${q(node).property('enableText')}
+    float = ${q(node).property('float')}
+    textMobileBottom = ${q(node).property('textMobileBottom')}
+    enableHeadline = ${q(node).property('enableHeadline')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
+    theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
+    align = ${q(node).property('align')}
     links = Litefyr.Integration:Component.Links
 
     headline = Neos.Neos:Editable {
@@ -29,11 +35,11 @@ prototype(Jonnitto.Maps:Content.Map) {
     additionalClass = Neos.Fusion:Component {
         @if.set = ${!q(node).property('enableText')}
         breakout = ${q(node).property('breakout')}
+        enableClipPath = ${this.breakout == 'full' ? Carbon.Array.check(q(node).property('enableClipPath')) : false}
         renderer = Litefyr.Presentation:Spacing {
             onlyClass = true
             width = ${props.breakout}
-            waveSpacing = true
-            class = ${Presentation.cssClass('map')}
+            class = ${[Presentation.cssClass('map'), props.enableClipPath ?  Presentation.clippathClass('content', 'map') : null]}
             tailwind = Neos.Fusion:Match {
                 @subject = ${props.breakout}
                 @default = 'rounded-box overflow-clip shadow'

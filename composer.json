@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "litefyr/integration": "self.version",
-        "jonnitto/maps": "^0.2"
+        "jonnitto/maps": "^0.3"
     },
     "autoload": {
         "psr-4": {

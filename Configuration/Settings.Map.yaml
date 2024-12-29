@@ -1,0 +1,28 @@
+Jonnitto:
+  Maps:
+    # Can be MapLibre or Leaflet. No effect for GoogleMaps
+    mapLibrary: 'MapLibre'
+
+    # Can be Stadiamaps, GoogleMaps, OpenStreetMap or Protomaps
+    mapService: 'Stadiamaps'
+    pinColor: 'oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h))'
+    Stadiamaps:
+      style:
+        light: osm_bright
+        dark: alidade_smooth_dark
+        basedOn: class
+    Protomaps:
+      apiKey: '%env:PROTOMAPS_API_KEY%'
+      style:
+        light: light
+        dark: dark
+        basedOn: class
+
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Carbon.GeoMapEditor':
+          defaultTileLayer:
+            url: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png'
+            attribution: false
