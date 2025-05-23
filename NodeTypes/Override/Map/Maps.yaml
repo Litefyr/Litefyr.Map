@@ -7,6 +7,8 @@
     'Litefyr.Style:Mixin.EnableClipPath': true
   ui:
     position: 900
+    help:
+      message: 'Litefyr.Map:NodeTypes.Content.Address:ui.help.message'
   properties:
     enableClipPath:
       ui:

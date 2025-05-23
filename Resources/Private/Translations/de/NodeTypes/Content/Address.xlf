@@ -2,6 +2,16 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Litefyr.Map" source-language="en" target-language="de" datatype="plaintext">
         <body>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Any number of addresses
+* Initial zoom level freely selectable
+* Width selectable
+* Optional text field</source>
+                <target>* Beliebig viele Adressen
+* Initialer Zoomlevel frei wählbar
+* Breite wählbar
+* Optionales Textfeld</target>
+            </trans-unit>
             <trans-unit id="groups.map" xml:space="preserve">
                 <source>Map</source>
                 <target>Karte</target>
